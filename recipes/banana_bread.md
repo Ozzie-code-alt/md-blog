@@ -2,7 +2,7 @@
 title: "Banana Bread"
 prep_time: "15 minutes"
 cook_time: "60 minutes"
-image: "/metaDataPics/1.jpg"
+image: "/vercel.svg" 
 author: "justin Not Santos"
 description: "Moist and flavorful bread made with ripe bananas, perfect for breakfast or a snack."
 

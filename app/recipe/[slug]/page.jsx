@@ -82,8 +82,10 @@ export const generateStaticParams = async () => {
 
 export async function generateMetadata({ params, searchParams }) {
     const slug = params?.slug;
+    
     const postContent = getPostContent(slug);
-
+    console.log("this is inside slug", slug)
+    console.log("this is postContent", postContent)
     const title = `Kwatro Distrito Blog ⋅ ${slug.replaceAll('_', ' ')}`;
     const ogImage = postContent.metadata.image || 'https://example.com/default-image.jpg'; // Default image if none specified
     const ogDescription = postContent.metadata.description || `Read the latest updates on ${slug.replaceAll('_', ' ')} at Kwatro Distrito Blog.`;
@@ -96,31 +98,35 @@ export async function generateMetadata({ params, searchParams }) {
     return {
         title: title,
         description: ogDescription,
-        ogimage: ogImage,
+        image: ogImage,
         url: url,
-        author: author
+        Author: author
     }
 }
+
 
 const RecipePage = (props) => {
     const slug = props.params.slug;
     const post = getPostContent(slug);
+
     return (
-        <main> 
-                <Head>
-                <title>{metaData.title}</title>
-                <meta name="description" content={metaData.description}/>
-                <meta property="og:title" content={metaData.title}/>
-                <meta property="og:description" content={metaData.description}/>
-                <meta property="og:image" content="https://photos.app.goo.gl/q82g6Kq3QBbPJSte9"/>
-                <meta property="og:url" content={metaData.url}/>
-                <meta property="og:type" content="article"/>
-                <meta property="article:author" content={metaData.author}/>
-            </Head>
-            <article>
-                <Markdown>{post.content}</Markdown>
-            </article>
-        </main>
+        <main>
+        <Head>
+            <title>{post.metadata.title}</title>
+            <meta name="description" content={post.metadata.description} />
+            <meta property="og:title" content={post.metadata.title} />
+            <meta property="og:description" content={post.metadata.description} />
+            <meta property="og:image" content={post.metadata.image} />
+            <meta property="og:url" content={`https://yourdomain.com/blog/${slug}`} />
+        </Head>
+        <article>
+            <h1>{post.metadata.title}</h1>
+            <p><strong>Author:</strong> {post.metadata.author}</p>
+            <img src={post.metadata.image} alt={`Image for ${post.metadata.title}`} />
+            <p>{post.metadata.description}</p>
+            <Markdown>{post.content}</Markdown>
+        </article>
+    </main>
     )
 }
 
