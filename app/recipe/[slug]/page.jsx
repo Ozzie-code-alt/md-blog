@@ -92,7 +92,7 @@ export async function generateMetadata({ params, searchParams }) {
     return {
         title: title,
         description: ogDescription,
-        img: ogImage,
+        image: ogImage,
         url: url,
         author: "justin Santos"
     }
