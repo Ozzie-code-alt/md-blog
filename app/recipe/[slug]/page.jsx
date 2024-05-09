@@ -85,16 +85,20 @@ export async function generateMetadata({ params, searchParams }) {
     const postContent = getPostContent(slug);
 
     const title = `Kwatro Distrito Blog ⋅ ${slug.replaceAll('_', ' ')}`;
-    const ogImage = "/1.jpg"
+    const ogImage = postContent.metadata.image || 'https://example.com/default-image.jpg'; // Default image if none specified
     const ogDescription = postContent.metadata.description || `Read the latest updates on ${slug.replaceAll('_', ' ')} at Kwatro Distrito Blog.`;
     const url = `https://yourdomain.com/blog/${slug}`;
-
+    const author  = postContent.metadata.author
+    console.log("this is autor", author)
+    console.log("this is url", url)
+    console.log("this is ogDescription", ogDescription)
+    console.log("this is ogImage", ogImage)
     return {
         title: title,
         description: ogDescription,
         image: ogImage,
         url: url,
-        author: "justin Santos"
+        author: author
     }
 }
 

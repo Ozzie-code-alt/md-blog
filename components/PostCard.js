@@ -11,6 +11,7 @@ export default function PostCard(props) {
                     <div>
                         <h5>Prep Time</h5>
                         <p>{post.prep_time}</p>
+                      <p>by {post.author}</p>
                     </div>
                     <div>
                         <h5>Cook Time</h5>
