@@ -1,10 +1,11 @@
 ---
-title: "Apple Pie"
-prep_time: "90 minutes"
+title: "Banana Bread"
+prep_time: "15 minutes"
 cook_time: "60 minutes"
-image: "/next.svg"
-author: "justin Santos"
-description: "A traditional pie with a flaky crust and a sweet, spiced apple filling, perfect for any occasion."
+image: "/vercel.svg" 
+author: "justin Not Santos"
+description: "Moist and flavorful bread made with ripe bananas, perfect for breakfast or a snack."
+
 ---
 
 # Classic Apple Pie
