@@ -85,7 +85,7 @@ export async function generateMetadata({ params, searchParams }) {
     const postContent = getPostContent(slug);
 
     const title = `Kwatro Distrito Blog ⋅ ${slug.replaceAll('_', ' ')}`;
-    const ogImage = postContent.metadata.image || 'https://example.com/default-image.jpg'; // Default image if none specified
+    const ogImage = "/1.jpg"
     const ogDescription = postContent.metadata.description || `Read the latest updates on ${slug.replaceAll('_', ' ')} at Kwatro Distrito Blog.`;
     const url = `https://yourdomain.com/blog/${slug}`;
 
