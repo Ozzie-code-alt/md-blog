@@ -96,7 +96,7 @@ export async function generateMetadata({ params, searchParams }) {
     return {
         title: title,
         description: ogDescription,
-        image: ogImage,
+        ogimage: ogImage,
         url: url,
         author: author
     }
@@ -107,6 +107,16 @@ const RecipePage = (props) => {
     const post = getPostContent(slug);
     return (
         <main> 
+                <Head>
+                <title>{metaData.title}</title>
+                <meta name="description" content={metaData.description}/>
+                <meta property="og:title" content={metaData.title}/>
+                <meta property="og:description" content={metaData.description}/>
+                <meta property="og:image" content="https://photos.app.goo.gl/q82g6Kq3QBbPJSte9"/>
+                <meta property="og:url" content={metaData.url}/>
+                <meta property="og:type" content="article"/>
+                <meta property="article:author" content={metaData.author}/>
+            </Head>
             <article>
                 <Markdown>{post.content}</Markdown>
             </article>
