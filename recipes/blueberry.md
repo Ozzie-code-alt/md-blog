@@ -2,7 +2,7 @@
 title: "Blueberry Scones"
 prep_time: "15 minutes"
 cook_time: "20 minutes"
-image: "/vercel.svg" 
+image: "/next.svg" 
 author: "justin Not Santos"
 description: "Tender, buttery scones bursting with fresh blueberries, perfect for a morning treat."
 
