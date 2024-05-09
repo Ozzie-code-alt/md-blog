@@ -2,7 +2,7 @@
 title: "Apple Pie"
 prep_time: "90 minutes"
 cook_time: "60 minutes"
-image: "https://photos.app.goo.gl/q82g6Kq3QBbPJSte9"
+image: "/next.svg"
 author: "justin Santos"
 description: "A traditional pie with a flaky crust and a sweet, spiced apple filling, perfect for any occasion."
 ---
